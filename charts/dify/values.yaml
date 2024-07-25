@@ -143,10 +143,10 @@ api:
       ## If set to "-", storageClassName: "", which disables dynamic provisioning
       ## If undefined (the default) or set to null, no storageClassName spec is
       ##   set, choosing the default provisioner.
-      ## ReadWriteMany access mode required for `api` and `worker`
+      ## ReadWriteOnce access mode required for `api` and `worker`
       ##
       storageClass:
-      accessModes: ReadWriteMany
+      accessModes: ReadWriteOnce
       size: 5Gi
       subPath: ""
 
@@ -200,10 +200,10 @@ proxy:
         ## If set to "-", storageClassName: "", which disables dynamic provisioning
         ## If undefined (the default) or set to null, no storageClassName spec is
         ##   set, choosing the default provisioner.
-        ## ReadWriteMany access mode required for nginx
+        ## ReadWriteOnce access mode required for nginx
         ##
         storageClass:
-        accessModes: ReadWriteMany
+        accessModes: ReadWriteOnce
         size: 1Gi
         subPath: ""
   service:
